@@ -214,7 +214,7 @@ public class LightShotServer {
 
         // Building the webserver
         Undertow undertow = Undertow.builder()
-                .addHttpListener(port, host)
+                .addHttpListener(port, "127.0.0.1")
                 .setHandler(new EagerFormParsingHandler(
                         FormParserFactory.builder()
                                 .addParsers(new MultiPartParserDefinition())
